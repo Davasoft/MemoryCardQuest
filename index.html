@@ -6,9 +6,7 @@
     <title>Unity WebGL Player | Memory Card Game</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-      <div id="unity-container" style="position: absolute; width: 100%; height: 100%">
-          <canvas id="unity-canvas" width=1920 height=1080 style="width: auto; height: 100%; background: #231F20"></canvas>
-      </div>
+    <canvas id="unity-canvas" width=1280 height=720 tabindex="-1" style="width: 1280px; height: 720px; background: #231F20"></canvas>
     <script src="Build/MemoryCardQuest.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -27,15 +25,15 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/MemoryCardQuest.data.unityweb",
-        frameworkUrl: "Build/MemoryCardQuest.framework.js.unityweb",
-        codeUrl: "Build/MemoryCardQuest.wasm.unityweb",
+        dataUrl: "Build/MemoryCardQuest.data",
+        frameworkUrl: "Build/MemoryCardQuest.framework.js",
+        codeUrl: "Build/MemoryCardQuest.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Memory Card Game",
         productVersion: "0.1",
-        matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
     </script>
   </body>
